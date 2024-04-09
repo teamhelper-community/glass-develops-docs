@@ -15,15 +15,11 @@ export default defineUserConfig({
         lastUpdatedText: "",
         // series 为原 sidebar
         series: {
-            "/docs/theme-reco/": [
+            "/docs/quick_start/": [
                 {
-                    text: "module one",
-                    children: ["home", "theme"],
-                },
-                {
-                    text: "module two",
-                    children: ["api", "plugin"],
-                },
+                    text: "快速开始",
+                    children: ["introduce", "supportive", "quick_start"],
+                }
             ],
             '/blogs/': [
                 {
@@ -35,7 +31,7 @@ export default defineUserConfig({
             ]
         },
         navbar: [
-            {text: '快速开始', link: '/docs/guide', icon: 'Compass'},
+            {text: '快速开始', link: '/docs/quick_start/introduce', icon: 'Compass'},
             {
                 text: 'API文档',
                 icon: 'Document',
