@@ -249,5 +249,14 @@ android {
    <p align="center">
    <img  align="center" src="./quick_start.assets/image-20240410164447159.png" alt="image-20240410164447159" width="800" /></p>
 
+## 示例工程
+
+你也可以通过Git拉取我们的示例项目快速上手`Glass Application SDK`。
+
+```bash
+git clone https://github.com/Teamhelper/glass-applicatiin-tutorial.git
+```
 
 
+   <p align="center">
+   <img  align="center" src="./quick_start.assets/image-20240410174418820.png" alt="image-20240410174418820" width="800" /></p>
