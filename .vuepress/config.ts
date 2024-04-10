@@ -39,21 +39,21 @@ export default defineUserConfig({
                     {
                         text: '基础框架',
                         children: [
-                            {text: '模版基类', link: '/docs/基础框架/模版基类.html'},
-                            {text: '交互逻辑', link: '/docs/基础框架/模版基类.html'},
-                            {text: 'UI 组件', link: '/docs/基础框架/UI 组件.html'},
-                            {text: '相机/麦克风', link: '/docs/基础框架/相机_麦克风.html',},
-                            {text: '设计资源', link: '/docs/基础框架/设计资源.html'},
+                            {text: '模版基类', link: '/docs/basic_framework/模版基类.html'},
+                            {text: '交互逻辑', link: '/docs/basic_framework/模版基类.html'},
+                            {text: 'UI 组件', link: '/docs/basic_framework/UI 组件.html'},
+                            {text: '相机/麦克风', link: '/docs/basic_framework/相机_麦克风.html',},
+                            {text: '设计资源', link: '/docs/basic_framework/设计资源.html'},
                         ],
                     },
                     {
                         text: '插件化容器',
                         children: [
-                            {text: '用户空间', link: '/docs/插件化容器/用户空间.html'},
-                            {text: '插件管理', link: '/docs/插件化容器/插件管理.html'},
-                            {text: '通信机制', link: '/docs/插件化容器/通信机制.html'},
-                            {text: '消息推送', link: '/docs/插件化容器/消息推送.html'},
-                            {text: '插件镜像源', link: '/docs/插件化容器/插件镜像源.html'},
+                            {text: '用户空间', link: '/docs/pluggable_container/用户空间.html'},
+                            {text: '插件管理', link: '/docs/pluggable_container/插件管理.html'},
+                            {text: '通信机制', link: '/docs/pluggable_container/通信机制.html'},
+                            {text: '消息推送', link: '/docs/pluggable_container/消息推送.html'},
+                            {text: '插件镜像源', link: '/docs/pluggable_container/插件镜像源.html'},
                         ],
                     },
 

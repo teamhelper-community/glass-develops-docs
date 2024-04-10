@@ -12,6 +12,12 @@ date: 2024-03-19 09:00:00
 
 > `Glass Application SDK` 是一套基于 `Android`原生的XR眼镜应用开发工具包，内部包含Glass常用UI组件和Glass应用基类，旨在帮助开发者以极简的接入步骤，快速构建适配多个厂商、数十款XR设备的  `XR Glass`应用。
 
+:::info
+
+现阶段`Glass SDK`基于`MVVM`架构和`Material3`，SDK封装采用`Options API`思想，使用`DataBinding`框架完成UI和数据的双向绑定。当然，组合优于继承，后续也会推出基于`Composition API`设计思想的组合式API，届时将不限制应用架构为`MVVM`。
+
+:::
+
 ## 开放背景
 
 `Glass Application SDK`
