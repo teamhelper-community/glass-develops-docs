@@ -5,7 +5,6 @@ export default defineUserConfig({
     title: "Glass Develops Tutorial",
     description: "Just playing around",
     plugins: [],
-    base: "/glass-develops-docs/",
     theme: recoTheme({
         style: "@vuepress-reco/style-default",
         logo: "/logo.png",
