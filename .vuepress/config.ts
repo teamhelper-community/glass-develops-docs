@@ -15,18 +15,28 @@ export default defineUserConfig({
         docsDir: ".",
         lastUpdatedText: "",
         commentConfig: {
-            type: 'giscus',
+            // type: 'giscus',
+            // options: {
+            //     repo: 'teamhelper-community/glass-develops-docs',
+            //     repoId: 'R_kgDOLuSjuA',
+            //     category: 'Announcements',
+            //     categoryId: 'DIC_kwDOLuSjuM4CeseX',
+            //     mapping: 'title',
+            //     hideComments: false,
+            //     strict: '1',
+            //     lang: 'zh-CN',
+            //     crossorigin: 'anonymous'
+            // },
+            type: 'valine',
             options: {
-                repo: 'teamhelper-community/glass-develops-docs',
-                repoId: 'R_kgDOLuSjuA',
-                category: 'Announcements',
-                categoryId: 'DIC_kwDOLuSjuM4CeseX',
-                mapping: 'title',
-                hideComments: false,
-                strict: '1',
-                lang: 'zh-CN',
-                crossorigin: 'anonymous'
-            },
+                appId: 'qzM3DTGNPFxSCsg9VvkRZLHF-gzGzoHsz',
+                appKey: 'c8NnfIQsmMHbexDPhTiDAwkv',
+                placeholder: '填写邮箱可以收到回复提醒哦！',
+                verify: true, // 验证码服务
+                // notify: true,
+                recordIP: true,
+                hideComments: false, // 隐藏评论
+            }
         },
         algolia: {
             appId: 'WELM0SJYVF',
