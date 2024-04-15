@@ -10,10 +10,32 @@ export default defineUserConfig({
         logo: "/logo.png",
         author: "Finger",
         authorAvatar: "/head.png",
-        docsRepo: "https://github.com/vuepress-reco/vuepress-theme-reco-next",
-        docsBranch: "main",
-        docsDir: "example",
+        docsRepo: "https://github.com/teamhelper-community/glass-develops-docs",
+        docsBranch: "master",
+        docsDir: ".",
         lastUpdatedText: "",
+        commentConfig: {
+            type: 'giscus',
+            options: {
+                repo: 'teamhelper-community/glass-develops-docs',
+                repoId: 'R_kgDOLuSjuA',
+                category: 'Announcements',
+                categoryId: 'DIC_kwDOLuSjuM4CeseX',
+                mapping: 'title',
+                hideComments: false,
+                strict: '1',
+                lang: 'zh-CN',
+                crossorigin: 'anonymous'
+            },
+        },
+        algolia: {
+            appId: 'WELM0SJYVF',
+            apiKey: '10eeaa215dd6fb9a79f89f9a552d0ce6',
+            indexName: 'dev_teamhelper_glass_sdk',
+            inputSelector: '### REPLACE ME ####',
+            algoliaOptions: {'facetFilters': ["lang:$LANG"]},
+            debug: false // Set debug to true if you want to inspect the dropdown
+        },
         // series 为原 sidebar
         series: {
             "/docs/quick_start/": [
@@ -200,25 +222,12 @@ export default defineUserConfig({
                     type: "text",
                     content: `
           <ul>
-            <li><a href="https://github.com/vuepress-reco/vuepress-theme-reco-next/issues">Issues<a/></li>
-            <li><a href="https://github.com/vuepress-reco/vuepress-theme-reco-next/discussions/1">Discussions<a/></li>
+            <li><a href="https://github.com/teamhelper-community/glass-develops-docs/issues">Issues<a/></li>
+            <li><a href="https://github.com/teamhelper-community/glass-develops-docs/discussions/1">Discussions<a/></li>
           </ul>`,
                     style: "font-size: 12px;",
                 }
             ],
-        },
-        commentConfig: {
-            type: 'valine',
-            // options 与 1.x 的 valineConfig 配置一致
-            options: {
-                // appId: 'xxx',
-                // appKey: 'xxx',
-                // placeholder: '填写邮箱可以收到回复提醒哦！',
-                // verify: true, // 验证码服务
-                // notify: true,
-                // recordIP: true,
-                // hideComments: true // 隐藏评论
-            },
         },
     }),
     // debug: true,
