@@ -4,6 +4,7 @@ import recoTheme from "vuepress-theme-reco";
 export default defineUserConfig({
     title: "Glass Develops Tutorial",
     description: "Just playing around",
+    plugins: [],
     theme: recoTheme({
         style: "@vuepress-reco/style-default",
         logo: "/logo.png",
@@ -28,7 +29,88 @@ export default defineUserConfig({
                         '/blogs/deploy.md'
                     ],
                 },
-            ]
+            ],
+            "/docs/basic_framework/": [
+                {
+                    text: "Glass Application SDK",
+                    children: [
+                        "overview_template_base_class"
+                    ],
+                },
+                {
+                    text: "模板基类",
+                    children: [
+                        "template_base_class_base_application",
+                        "template_base_class_base_activity",
+                        "template_base_class_base_fragment",
+                    ],
+                },
+                {
+                    text: "交互逻辑",
+                    children: [
+                        "overview_interaction_logic",
+                        "interaction_logic_sign",
+                        "interaction_logic_focus",
+                        "interaction_logic_voice",
+                        "interaction_logic_listen"
+                    ],
+                },
+                {
+                    text: "UI 组件",
+                    children: [
+                        "overview_ui_components",
+                        "ui_button",
+                        "ui_input",
+                        "ui_list_item",
+                        "ui_list",
+                        "ui_list_picker",
+                        "ui_dialog",
+                        "ui_notification",
+                        "ui_status_bar",
+                        "ui_tool_bar",
+                        "ui_card",
+                        "ui_expand_layer",
+                    ],
+                },
+                {
+                    text: "相机API",
+                    children: [
+                        "overview_camera_microphone",
+                        "camera_permission",
+                        "camera_photo",
+                        "camera_video",
+                        "camera_capture_frame",
+                        "camera_frame_convert",
+                        "camera_frame_rotation"
+                    ],
+                },
+                {
+                    text: "设计资源",
+                    children: ["overview_design_resources"],
+                }
+            ],
+            "/docs/pluggable_container/": [
+                {
+                    text: "用户空间",
+                    children: ["user_space"],
+                },
+                {
+                    text: "插件管理",
+                    children: ["plugin_management"],
+                },
+                {
+                    text: "通信机制",
+                    children: ["communication_mechanism"],
+                },
+                {
+                    text: "消息推送",
+                    children: ["push_message"],
+                },
+                {
+                    text: "插件镜像源",
+                    children: ["plugin_mirror_source"],
+                }
+            ],
         },
         navbar: [
             {text: '快速开始', link: '/docs/quick_start/introduce', icon: 'Compass'},
@@ -39,21 +121,21 @@ export default defineUserConfig({
                     {
                         text: '基础框架',
                         children: [
-                            {text: '模版基类', link: '/docs/basic_framework/模版基类.html'},
-                            {text: '交互逻辑', link: '/docs/basic_framework/模版基类.html'},
-                            {text: 'UI 组件', link: '/docs/basic_framework/UI 组件.html'},
-                            {text: '相机/麦克风', link: '/docs/basic_framework/相机_麦克风.html',},
-                            {text: '设计资源', link: '/docs/basic_framework/设计资源.html'},
+                            {text: '模版基类', link: '/docs/basic_framework/overview_template_base_class'},
+                            {text: '交互逻辑', link: '/docs/basic_framework/overview_interaction_logic'},
+                            {text: 'UI 组件', link: '/docs/basic_framework/overview_ui_components'},
+                            {text: '相机API', link: '/docs/basic_framework/overview_camera_microphone',},
+                            {text: '设计资源', link: '/docs/basic_framework/overview_design_resources'},
                         ],
                     },
                     {
                         text: '插件化容器',
                         children: [
-                            {text: '用户空间', link: '/docs/pluggable_container/用户空间.html'},
-                            {text: '插件管理', link: '/docs/pluggable_container/插件管理.html'},
-                            {text: '通信机制', link: '/docs/pluggable_container/通信机制.html'},
-                            {text: '消息推送', link: '/docs/pluggable_container/消息推送.html'},
-                            {text: '插件镜像源', link: '/docs/pluggable_container/插件镜像源.html'},
+                            {text: '用户空间', link: '/docs/pluggable_container/overview_user_space'},
+                            {text: '插件管理', link: '/docs/pluggable_container/overview_plugin_management'},
+                            {text: '通信机制', link: '/docs/pluggable_container/overview_communication_mechanism'},
+                            {text: '消息推送', link: '/docs/pluggable_container/overview_push_message'},
+                            {text: '插件镜像源', link: '/docs/pluggable_container/overview_plugin_mirror_source'},
                         ],
                     },
 
