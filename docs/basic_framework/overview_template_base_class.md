@@ -55,8 +55,8 @@ Glass Application SDK 基于 MVVM (Model-View-ViewModel) 架构模式，这种�
 
 `Glass Application SDK` 统一了 XR 眼镜的操作交互逻辑，开发者无需关心不同型号的 XR 眼镜会有不同的操作方式，只需按照 `Glass Application SDK` 的操作交互逻辑进行开发，就可以保证在所有支持的 XR 眼镜上都能提供一致的用户体验。
 
-## 相机和麦克风操作
+## 相机操作
 
-`Glass Application SDK` 封装了 XR 眼镜上对相机和麦克风的操作，开发者可以轻松地调用相机和麦克风，进行拍照、录像、录音等操作。
+`Glass Application SDK` 封装了 XR 眼镜上对相机的操作，开发者可以轻松地调用相机，进行拍照、录像、结合AI分析实时相片帧等操作。
 
 总的来说，`Glass Application SDK` 是一款全面、强大的 XR 眼镜开发工具包，无论你是初级开发者还是资深开发者，都可以利用 `Glass Application SDK` 快速、高效地开发出适合 XR 眼镜的应用程序。
