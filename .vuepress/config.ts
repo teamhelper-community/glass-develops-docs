@@ -123,24 +123,30 @@ export default defineUserConfig({
             ],
             "/docs/pluggable_container/": [
                 {
+                    text: "Glass Plugin Container",
+                    children: [
+                        "overview_pluggable_container"
+                    ],
+                },
+                {
                     text: "用户空间",
-                    children: ["user_space"],
+                    children: ["overview_user_space"],
                 },
                 {
                     text: "插件管理",
-                    children: ["plugin_management"],
+                    children: ["overview_plugin_management"],
                 },
                 {
                     text: "通信机制",
-                    children: ["communication_mechanism"],
+                    children: ["overview_communication_mechanism"],
                 },
                 {
                     text: "消息推送",
-                    children: ["push_message"],
+                    children: ["overview_push_message"],
                 },
                 {
                     text: "插件镜像源",
-                    children: ["plugin_mirror_source"],
+                    children: ["overview_plugin_mirror_source"],
                 }
             ],
         },
@@ -153,7 +159,8 @@ export default defineUserConfig({
                     {
                         text: '基础框架',
                         children: [
-                            {text: '模版基类', link: '/docs/basic_framework/overview_template_base_class'},
+                            {text: '框架概览', link: '/docs/basic_framework/overview_template_base_class'},
+                            {text: '模版基类', link: '/docs/basic_framework/template_base_class_base_application'},
                             {text: '交互逻辑', link: '/docs/basic_framework/overview_interaction_logic'},
                             {text: 'UI 组件', link: '/docs/basic_framework/overview_ui_components'},
                             {text: '相机API', link: '/docs/basic_framework/overview_camera_microphone',},
@@ -163,6 +170,7 @@ export default defineUserConfig({
                     {
                         text: '插件化容器',
                         children: [
+                            {text: '容器阐述', link: '/docs/pluggable_container/overview_pluggable_container'},
                             {text: '用户空间', link: '/docs/pluggable_container/overview_user_space'},
                             {text: '插件管理', link: '/docs/pluggable_container/overview_plugin_management'},
                             {text: '通信机制', link: '/docs/pluggable_container/overview_communication_mechanism'},
@@ -191,7 +199,7 @@ export default defineUserConfig({
                 text: '版本路线',
                 icon: 'SubVolume',
                 children: [
-                    {text: '1.x(RC)', link: '/api/1.x/'},
+                    {text: '1.0.0(RC)', link: '/docs/roadmap'},
                 ],
             },
             {text: '技术博客', link: '/posts', icon: 'DocumentAttachment'},

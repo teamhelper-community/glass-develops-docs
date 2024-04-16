@@ -11,11 +11,11 @@ bannerBrand:
   description: 一套完整、标准的XR应用开发框架。
   tagline: 旨在为AR行业开发者提供统一的硬件交互接口、为用户在各厂商AR硬件上带来更一致使用体验、加速AR设备厂商构建更丰富的场景生态。框架底层拥有音视频远程协助、SOP、PNS、AI终端推理等核心服务，高效赋能三方开发者进行多场景下AR + AI应用的快速开发。
   buttons:
-    - { text: 快速开始>_, link: '/docs/quick_start/introduce.html' }
-    - { text: 探索下一代XR基座, link: '/docs/pluggable_container/introduce', type: 'plain' }
+    - { text: 快速开始>_, link: '/docs/quick_start/introduce' }
+    - { text: 探索下一代XR基座, link: '/docs/pluggable_container/overview_pluggable_container', type: 'plain' }
   socialLinks:
-    - { icon: 'LogoGithub', link: 'https://github.com/vuepress-reco/vuepress-theme-reco' }
-    - { icon: 'LogoWechat', link: 'https://github.com/vuepress-reco/vuepress-theme-reco' }
+    - { icon: 'LogoGithub', link: 'https://github.com/teamhelper-community/glass-develops-docs' }
+    - { icon: 'LogoWechat', link: '' }
     - { icon: 'LogoDiscord', link: '' }
     - { icon: 'Wikis', link: '' }
 isShowTitleInHome: true
