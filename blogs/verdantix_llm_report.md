@@ -3,6 +3,10 @@ title: Verdantix - LLM（大型语言模型）在工业领域中的十个应用
 date: 2024-04-16
 categories:
   - 行业动态
+hideComments: false
+# 设置单个密码
+#password:
+#  - 14e1b600b1fd579f47433b88e8d85291
 ---
 
 ** **

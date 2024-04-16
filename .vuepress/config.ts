@@ -6,9 +6,10 @@ export default defineUserConfig({
     description: "Just playing around",
     plugins: [],
     theme: recoTheme({
+        autoSetBlogCategories: true,
         style: "@vuepress-reco/style-default",
         logo: "/logo.png",
-        author: "Finger",
+        author: "Teamhelper Community",
         authorAvatar: "/head.png",
         docsRepo: "https://github.com/teamhelper-community/glass-develops-docs",
         docsBranch: "master",
@@ -58,7 +59,7 @@ export default defineUserConfig({
                 {
                     text: '行业动态',
                     children: [
-                        '/blogs/verdantix_llm_report.md'
+                        '/blogs/verdantix_llm_report'
                     ],
                 },
             ],
@@ -202,7 +203,14 @@ export default defineUserConfig({
                     {text: '1.0.0(RC)', link: '/docs/roadmap'},
                 ],
             },
-            {text: '技术博客', link: '/posts', icon: 'DocumentAttachment'},
+            {
+                text: '技术博客',
+                icon: 'DocumentAttachment',
+                children: [
+                    {text: '博客列表', link: '/posts'},
+                    {text: '博客时间轴', link: '/timeline'},
+                ]
+            },
             {text: '案例', link: '/docs/examples', icon: 'Fire'},
             {text: '留言板', link: '/docs/message-board', icon: 'Chat'},
         ],

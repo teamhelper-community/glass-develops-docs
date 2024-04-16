@@ -1,8 +1,8 @@
 {
   "name": "glass_develops_tutorial",
   "version": "2.0.0",
-  "description": "Demo for vuepress-theme-reco@2.x.",
-  "repository": "git@github.com:recoluan/vuepress-theme-reco-demo.git",
+  "description": "Glass develops tutorial",
+  "repository": "git@github.com:teamhelper-community/glass-develops-docs.git",
   "author": "Finger <Finger@spianmo.com>",
   "license": "MIT",
   "scripts": {

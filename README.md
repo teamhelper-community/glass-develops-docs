@@ -28,6 +28,10 @@ features:
     details: 沉淀XR行业多年，已兼容适配多种主流XR眼镜的，包括Rokid、Vuzix、蜂巢Glass、Argooz、拜特尔等，后续将适配更多硬件。
   - title: 更现代的开发体验
     details: 提供Java/Kotlin等多种开发语言的SDK，拥有更丰富的DSL语法糖，紧跟现代Android应用开发趋势，提升开发者开发效率。
+footer: # 底部模块的配置
+  record: 苏ICP备2020070137号-1
+  recordLink: https://beian.miit.gov.cn/
+  startYear: 2024
 ---
 
 ## 快速开始
