@@ -3,7 +3,7 @@ import recoTheme from "vuepress-theme-reco";
 
 export default defineUserConfig({
     title: "Glass Develops Tutorial",
-    description: "Just playing around",
+    description: "XR-Glass Application Develops Tutorial",
     plugins: [],
     theme: recoTheme({
         autoSetBlogCategories: true,
