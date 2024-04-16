@@ -224,8 +224,8 @@ export default defineUserConfig({
                     type: "text",
                     content: `
           <ul>
-            <li>XR行业交流群：<_待_填_写_></li>
-            <li>XR开发者交流群：<_待_填_写_></li>
+            <li>XR行业交流群：615444691</li>
+            <li>XR开发者交流群：815386788</li>
           </ul>`,
                     style: "font-size: 12px;",
                 },
