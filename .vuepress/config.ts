@@ -56,9 +56,9 @@ export default defineUserConfig({
             ],
             '/blogs/': [
                 {
-                    text: 'blogs1',
+                    text: '行业动态',
                     children: [
-                        '/blogs/deploy.md'
+                        '/blogs/verdantix_llm_report.md'
                     ],
                 },
             ],
