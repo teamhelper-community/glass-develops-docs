@@ -177,14 +177,14 @@ export default defineUserConfig({
                 text: '扩展能力',
                 icon: 'SubVolume',
                 children: [
-                    {text: '远程协助', link: 'https://v2.vuepress.vuejs.org/zh/reference/docs/plugins/vue-previews'},
+                    {text: '远程协助', link: ''},
                     {
                         text: 'LLM知识库',
-                        link: 'https://v2.vuepress.vuejs.org/zh/reference/docs/plugins/bulletin-popover'
+                        link: ''
                     },
-                    {text: '人脸识别', link: 'https://v2.vuepress.vuejs.org/zh/reference/docs/plugins/page'},
-                    {text: 'OCR组件', link: 'https://v2.vuepress.vuejs.org/zh/reference/docs/plugins/comments'},
-                    {text: 'SOP组件', link: 'https://v2.vuepress.vuejs.org/zh/reference/docs/plugins/bulletin-popover'},
+                    {text: '人脸识别', link: ''},
+                    {text: 'OCR组件', link: ''},
+                    {text: 'SOP组件', link: ''},
                 ],
             },
             {
