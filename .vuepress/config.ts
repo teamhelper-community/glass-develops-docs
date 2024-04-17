@@ -40,9 +40,9 @@ export default defineUserConfig({
             }
         },
         algolia: {
-            appId: 'WELM0SJYVF',
-            apiKey: '10eeaa215dd6fb9a79f89f9a552d0ce6',
-            indexName: 'dev_teamhelper_glass_sdk',
+            appId: '2MCEBPKXXR',
+            apiKey: '4c0972c42ec280548cd4e725d2028d4c',
+            indexName: 'teamhelper',
             inputSelector: '### REPLACE ME ####',
             algoliaOptions: {'facetFilters': ["lang:$LANG"]},
             debug: false // Set debug to true if you want to inspect the dropdown
