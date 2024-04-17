@@ -126,20 +126,42 @@ export default defineUserConfig({
                 {
                     text: "Glass Plugin Container",
                     children: [
-                        "overview_pluggable_container"
+                        "overview_pluggable_container",
+                        "container_definition",
+                        "key_tech_points",
+                        "design_standards",
+                        "tech_design",
+                        "core_architecture"
                     ],
                 },
                 {
                     text: "用户空间",
-                    children: ["overview_user_space"],
+                    children: [
+                        "overview_user_space",
+                        "create_user_space",
+                        "delete_user_space"
+                    ],
                 },
                 {
                     text: "插件管理",
-                    children: ["overview_plugin_management"],
+                    children: [
+                        "overview_plugin_management",
+                        "install_plugin",
+                        "uninstall_plugin",
+                        "update_plugin",
+                        "load_plugin",
+                        "kill_plugin",
+                        "clear_plugin_data",
+                        "list_plugins"
+                    ],
                 },
                 {
                     text: "通信机制",
-                    children: ["overview_communication_mechanism"],
+                    children: [
+                        "overview_communication_mechanism",
+                        "inter_application_communication",
+                        "container_plugin_communication"
+                    ],
                 },
                 {
                     text: "消息推送",
@@ -148,6 +170,13 @@ export default defineUserConfig({
                 {
                     text: "插件镜像源",
                     children: ["overview_plugin_mirror_source"],
+                },
+                {
+                    text: "授权许可",
+                    children: [
+                        "overview_authority_license",
+                        "authority_license",
+                    ],
                 }
             ],
         },
