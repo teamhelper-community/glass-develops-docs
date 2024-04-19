@@ -137,7 +137,8 @@ export default defineUserConfig({
                     text: "快速搭建",
                     children: [
                         "quick_start",
-                        "standard_container_arch"
+                        "standard_container_arch",
+                        "glass_plugin_application_develop"
                     ],
                 },
                 {
@@ -151,7 +152,6 @@ export default defineUserConfig({
                 {
                     text: "插件管理",
                     children: [
-                        "overview_plugin_management",
                         "install_plugin",
                         "uninstall_plugin",
                         "update_plugin",
@@ -164,7 +164,6 @@ export default defineUserConfig({
                 {
                     text: "通信机制",
                     children: [
-                        "overview_communication_mechanism",
                         "inter_application_communication",
                         "container_plugin_communication"
                     ],

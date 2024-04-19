@@ -127,139 +127,174 @@ android {
 
 ## 开始使用
 
-1. 创建自定义`Application`类继承自`GlassBaseApplication`，并在`AndroidManifest.xml`中注册你自定义的`Application`
-   类，将`App`的`theme`继承改为`Glass SDK`中的`Theme.Base.Glass`
+### Application初始化插件化容器
 
-   :::: code-group
-   ::: code-group-item App.kt
+创建自定义`Application`类继承自`GlassBaseApplication`，并在`AndroidManifest.xml`中注册你自定义的`Application`
+类，将`App`的`theme`继承改为`Glass SDK`中的`Theme.Base.Glass`。在`addApplications`方法中通过`appConfig.add(PluginApplication())`初始化插件化容器。
 
-   ```kotlin
-   import com.mst.basics.GlassBaseApplication
-   
-   class App : GlassBaseApplication()
-   ```
+:::: code-group
+::: code-group-item App.kt
 
-   :::
-   ::: code-group-item App.java
+```kotlin
+package com.teamhelper.basestation
 
-   ```java
-   import com.mst.basics.GlassBaseApplication;
-   
-   public class App extends GlassBaseApplication { }
-   ```
+import com.mst.basics.GlassBaseApplication
+import com.plugincore.wrapper.application.PluginApplication
+import com.teamhelper.base.application.AppConfig
 
-   :::
-   ::::
 
-   :::: code-group
-   ::: code-group-item AndroidManifest.xml
+class App : GlassBaseApplication() {
+    override fun addApplications(appConfig: AppConfig) {
+        super.addApplications(appConfig)
+        appConfig.add(PluginApplication())
+    }
+}
+```
 
-   ```xml
-   <?xml version="1.0" encoding="utf-8"?>
-   <manifest xmlns:android="http://schemas.android.com/apk/res/android">
-   
-       <application
-           ...
-           android:name="<your_package>.App"
-           android:theme="@style/Theme.TestPlugin">
-           ...
-       </application>
-   
-   </manifest>
-   ```
+:::
+::::
 
-   :::
-   ::::
+:::: code-group
+::: code-group-item AndroidManifest.xml
 
-   :::: code-group
-   ::: code-group-item themes.xml
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
-   ```xml
-   <resources>
-       <style name="Theme.TestPlugin" parent="Theme.Base.Glass" />
-   </resources>
-   ```
+    <application
+        ...
+        android:name="<your_package>.App"
+        android:theme="@style/Theme.TestContainer">
+        ...
+    </application>
 
-   :::
-   ::::
+</manifest>
+```
 
-2. 创建一个新的`Activity`继承自`GlassBaseActivity`，重写`initView`方法，操作UI组件设置语音指令和点击事件，并通过focus()
-   方法聚焦为当前的操作焦点。关于[交互逻辑](/docs/basic_framework/交互逻辑.html)
-   和[UI组件](/docs/basic_framework/UI组件.html)的详细描述见API文档当中的相关描述。
-   :::: code-group
-   ::: code-group-item MainActivity.kt
+:::
+::::
 
-   ```kotlin
-   class MainActivity : GlassBaseActivity<ActivityMainBinding,    EmptyViewModel>() {
-   
-       override fun initParams() {
-   
-       }
-   
-       override fun initData() {
-   
-       }
-   
-       override fun initView() {
-         	// v为ActivityMainBinding:ViewDataBinding的实例
-           v.btnConfirm.setInstruct(InstructSingle("que ding", "确定", "confirm"))
-           v.btnConfirm.setOnClickListener {
-               toast("confirm")
-           }
-           v.btnConfirm.focus()
-       }
-   
-       override fun registerObserve() {
-   
-       }
-   }
-   ```
+:::: code-group
+::: code-group-item themes.xml
 
-   :::
-   ::::
+```xml
+<resources>
+    <style name="Theme.TestContainer" parent="Theme.Base.Glass" />
+</resources>
+```
 
-   :::: code-group
-   ::: code-group-item activity_main.xml
+:::
+::::
 
-   ```xml
-   <?xml version="1.0" encoding="utf-8"?>
-   <layout>
-   
-       <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-           xmlns:app="http://schemas.android.com/apk/res-auto"
-           xmlns:tools="http://schemas.android.com/tools"
-           android:layout_width="match_parent"
-           android:layout_height="match_parent"
-           tools:context=".MainActivity">
-   
-           <com.mst.basics.slide.widget.v2.GlassButton
-               android:id="@+id/btn_confirm"
-               app:sign="1"
-               app:layout_constraintStart_toStartOf="parent"
-               app:layout_constraintTop_toTopOf="parent"
-               app:layout_constraintEnd_toEndOf="parent"
-               app:layout_constraintBottom_toBottomOf="parent"
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:text="确定" />
-   
-       </androidx.constraintlayout.widget.ConstraintLayout>
-   </layout>
-   ```
+## 构建插件操作的简单页面
 
-   :::
-   ::::
+我们先创建一个新的`Activity`继承自`GlassBaseActivity`，重写`initView`方法，操作UI组件设置语音指令和点击事件，并通过focus()
+方法聚焦为当前的操作焦点。关于[交互逻辑](/docs/basic_framework/交互逻辑.html)和[UI组件](/docs/basic_framework/UI组件.html)的详细描述见API文档当中的相关描述。我们在当前页面中放置了三个`GlassButton`，分别示例**安装插件、启动插件、卸载插件**的基础功能，详细的API使用可以见后续章节。
+:::: code-group
+::: code-group-item MainActivity.kt
 
-3. 点击`▶️运行`，不出意外你即可得到如下运行结果，至此你已经成功接入了`Glass Application SDK`
-   ，接下来你可以详细阅读API文档，了解`Glass Application SDK`的[交互逻辑](/docs/basic_framework/交互逻辑.html)
-   和[UI组件封装](/docs/basic_framework/UI组件.html)。
+```kotlin
+package com.teamhelper.basestation.ui
 
-   <p align="center"><img src="./quick_start.assets/image-20240410165814301.png" alt="image-20240410165814301" width="300" /></p>
+import com.mst.basics.base.view.activity.GlassBaseActivity
+import com.plugincore.wrapper.PluginEngine
+import com.teamhelper.base.mvvm.databinding.viewmodel.EmptyViewModel
+import com.teamhelper.basestation.databinding.ActivityMainBinding
+import com.teamhelper.basestation.enums.InstructSingle
+import java.io.File
 
-   <p align="center">
-   <img  align="center" src="./quick_start.assets/image-20240410164447159.png" alt="image-20240410164447159" width="800" /></p>
+class MainActivity : GlassBaseActivity<ActivityMainBinding, EmptyViewModel>() {
 
-## 示例工程
+    override fun initParams() {
+
+    }
+
+    override fun initData() {
+
+    }
+
+    override fun initView() {
+        v.btn1.setInstruct(InstructSingle.INSTALL_PLUGIN)
+        v.btn1.setOnClickListener {
+            PluginEngine.installPlugin(File("/sdcard/test_plugin.apk"))
+        }
+
+        v.btn2.setInstruct(InstructSingle.LOAD_PLUGIN)
+        v.btn2.setOnClickListener {
+            PluginEngine.launchPlugin("com.mst.testplugin")
+        }
+
+        v.btn3.setInstruct(InstructSingle.UNINSTALL_PLUGIN)
+        v.btn3.setOnClickListener {
+            PluginEngine.uninstallPlugin("com.mst.testplugin")
+        }
+
+        setFocusView(v.btn1)
+    }
+
+    override fun registerObserve() {
+
+    }
+}
+```
+
+:::
+::::
+
+:::: code-group
+::: code-group-item activity_main.xml
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.mst.basics.slide.widget.v2.GlassButton
+            android:id="@+id/btn1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:sign="1"
+            android:layout_marginStart="@dimen/dp_10"
+            android:text="INSTALL PLUGIN" />
+
+        <com.mst.basics.slide.widget.v2.GlassButton
+            android:id="@+id/btn2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:sign="2"
+            android:layout_marginStart="@dimen/dp_10"
+            android:text="LOAD PLUGIN" />
+
+        <com.mst.basics.slide.widget.v2.GlassButton
+            android:id="@+id/btn3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:sign="3"
+            android:layout_marginStart="@dimen/dp_10"
+            android:text="UNINSTALL PLUGIN" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>
+```
+
+:::
+::::
+
+## 运行容器
+
+点击`▶️运行`，不出意外你即可得到如下运行结果，至此你已经成功创建了一个`Glass Plugin Container`，接下来你可以详细阅读API文档，了解关于[插件管理](overview_plugin_management)、[通信机制](overview_communication_mechanism)等更多API。
+
+<p align="center"><img src="./quick_start.assets/image-20240419172627047.png" alt="image-20240410165814301" width="300" /></p>
+
+<p align="center">
+<img  align="center" src="./quick_start.assets/image-20240419172739562.png" alt="image-20240410164447159" width="800" /></p>
+
+## 容器示例工程
 
 你也可以通过Git拉取我们的示例项目快速上手`Glass Plugin Container`。
 
