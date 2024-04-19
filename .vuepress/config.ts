@@ -127,11 +127,17 @@ export default defineUserConfig({
                     text: "Glass Plugin Container",
                     children: [
                         "overview_pluggable_container",
-                        "container_definition",
-                        "key_tech_points",
                         "design_standards",
+                        "key_tech_points",
                         "tech_design",
-                        "core_architecture"
+                        "core_architecture",
+                    ],
+                },
+                {
+                    text: "快速搭建",
+                    children: [
+                        "quick_start",
+                        "standard_container_arch"
                     ],
                 },
                 {
@@ -176,6 +182,8 @@ export default defineUserConfig({
                     children: [
                         "overview_authority_license",
                         "authority_license",
+                        "authority_client_side",
+                        "authority_server_side"
                     ],
                 }
             ],
@@ -201,6 +209,7 @@ export default defineUserConfig({
                         text: '插件化容器',
                         children: [
                             {text: '容器阐述', link: '/docs/pluggable_container/overview_pluggable_container'},
+                            {text: '快速搭建', link: '/docs/pluggable_container/create_container'},
                             {text: '用户空间', link: '/docs/pluggable_container/overview_user_space'},
                             {text: '插件管理', link: '/docs/pluggable_container/overview_plugin_management'},
                             {text: '通信机制', link: '/docs/pluggable_container/overview_communication_mechanism'},

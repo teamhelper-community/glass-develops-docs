@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="850px" height="330px" viewBox="0 0 850 330" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>secondary-users</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle-Copy-6" fill="#A2C048" x="42" y="0" width="241" height="330" rx="4"></rect>
+        <rect id="Rectangle-Copy-3" fill="#809C37" x="61" y="135" width="202" height="69" rx="4"></rect>
+        <text id="Apps-and-data" font-family="Roboto-Regular, Roboto" font-size="15" font-weight="normal" fill="#FFFFFF">
+            <tspan x="71" y="156">Apps and data</tspan>
+        </text>
+        <rect id="Rectangle-Copy-2" fill="#668636" x="61" y="228" width="202" height="69" rx="4"></rect>
+        <text id="Primary-user" font-family="Roboto-Regular, Roboto" font-size="16" font-weight="normal" fill="#668636">
+            <tspan x="61" y="47">Primary user</tspan>
+        </text>
+        <text id="DPC:-admin" font-family="Roboto-Regular, Roboto" font-size="15" font-weight="normal" fill="#FFFFFF">
+            <tspan x="71" y="249">DPC: admin</tspan>
+        </text>
+        <g id="Group-2-Copy" transform="translate(211.000000, 0.000000)">
+            <rect id="Rectangle-Copy" fill="#E2F1F5" x="99" y="0" width="234" height="330" rx="4"></rect>
+            <rect id="Rectangle-Copy-4" fill="#7DB7D4" x="115" y="135" width="202" height="69" rx="4"></rect>
+            <text id="Apps-and-data" font-family="Roboto-Regular, Roboto" font-size="15" font-weight="normal" fill="#FFFFFF">
+                <tspan x="126" y="156">Apps and data</tspan>
+            </text>
+            <rect id="Rectangle-Copy-5" fill="#4D8395" x="113" y="228" width="202" height="69" rx="4"></rect>
+            <text id="DPC:-admin-component" font-family="Roboto-Regular, Roboto" font-size="15" font-weight="normal" fill="#FFFFFF">
+                <tspan x="124" y="249">DPC: admin</tspan>
+            </text>
+            <text id="Secondary-user" font-family="Roboto-Regular, Roboto" font-size="16" font-weight="normal" fill="#4D8395">
+                <tspan x="115" y="47">Secondary user</tspan>
+            </text>
+            <path d="M32.4906557,77.5 L131.50505,77.5" id="Line" stroke="#BB4664" stroke-width="3" stroke-linecap="square"></path>
+            <path id="Line-decoration-1" d="M32.4906557,74.5 L32.4906557,80.5" stroke="#BB4664" stroke-width="3" stroke-linecap="square"></path>
+            <path id="Line-decoration-2" d="M131.50505,74.5 L131.50505,80.5" stroke="#BB4664" stroke-width="3" stroke-linecap="square"></path>
+            <text id="affiliated" font-family="Roboto-Italic, Roboto" font-size="12" font-style="italic" font-weight="normal" fill="#BB4664">
+                <tspan x="144.744141" y="81">Affiliated</tspan>
+            </text>
+        </g>
+        <g id="Group-2" transform="translate(211.000000, 0.000000)">
+            <rect id="Rectangle-Copy" fill="#E2F1F5" x="360" y="0" width="234" height="330" rx="4"></rect>
+            <rect id="Rectangle-Copy-4" fill="#7DB7D4" x="376" y="135" width="202" height="69" rx="4"></rect>
+            <text id="Apps-and-data" font-family="Roboto-Regular, Roboto" font-size="15" font-weight="normal" fill="#FFFFFF">
+                <tspan x="387" y="156">Apps and data</tspan>
+            </text>
+            <rect id="Rectangle-Copy-5" fill="#4D8395" x="374" y="228" width="202" height="69" rx="4"></rect>
+            <text id="DPC:-admin" font-family="Roboto-Regular, Roboto" font-size="15" font-weight="normal" fill="#FFFFFF">
+                <tspan x="385" y="249">DPC: admin</tspan>
+            </text>
+            <text id="Secondary-user" font-family="Roboto-Regular, Roboto" font-size="16" font-weight="normal" fill="#4D8395">
+                <tspan x="376" y="47">Secondary user</tspan>
+            </text>
+            <path d="M32.4663998,99.5 L404.50505,99.5" id="Line" stroke="#BB4664" stroke-width="3" stroke-linecap="square"></path>
+            <path id="Line-decoration-1" d="M32.4663998,96.5 L32.4663998,102.5" stroke="#BB4664" stroke-width="3" stroke-linecap="square"></path>
+            <path id="Line-decoration-2" d="M404.50505,96.5 L404.50505,102.5" stroke="#BB4664" stroke-width="3" stroke-linecap="square"></path>
+            <text id="affiliated" font-family="Roboto-Italic, Roboto" font-size="12" font-style="italic" font-weight="normal" fill="#BB4664">
+                <tspan x="417.744141" y="103">Affiliated</tspan>
+            </text>
+        </g>
+    </g>
+</svg>
