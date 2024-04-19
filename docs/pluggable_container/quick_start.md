@@ -261,11 +261,9 @@ android {
 
 ## 示例工程
 
-你也可以通过Git拉取我们的示例项目快速上手`Glass Application SDK`。
+你也可以通过Git拉取我们的示例项目快速上手`Glass Plugin Container`。
 
 ```bash
-git clone https://github.com/Teamhelper/glass-applicatiin-tutorial.git
+git clone https://github.com/Teamhelper/glass-plugin-container-example.git
 ```
 
-   <p align="center">
-   <img  align="center" src="./quick_start.assets/image-20240410174418820.png" alt="image-20240410174418820" width="800" /></p>
