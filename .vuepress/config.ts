@@ -158,7 +158,8 @@ export default defineUserConfig({
                         "load_plugin",
                         "kill_plugin",
                         "clear_plugin_data",
-                        "list_plugins"
+                        "list_plugins",
+                        "plugin_application_lifecycle"
                     ],
                 },
                 {
@@ -180,7 +181,6 @@ export default defineUserConfig({
                     text: "授权许可",
                     children: [
                         "overview_authority_license",
-                        "authority_license",
                         "authority_client_side",
                         "authority_server_side"
                     ],
@@ -211,9 +211,10 @@ export default defineUserConfig({
                             {text: '快速搭建', link: '/docs/pluggable_container/create_container'},
                             {text: '用户空间', link: '/docs/pluggable_container/overview_user_space'},
                             {text: '插件管理', link: '/docs/pluggable_container/overview_plugin_management'},
-                            {text: '通信机制', link: '/docs/pluggable_container/overview_communication_mechanism'},
+                            {text: '通信机制', link: '/docs/pluggable_container/inter_application_communication'},
                             {text: '消息推送', link: '/docs/pluggable_container/overview_push_message'},
                             {text: '插件镜像源', link: '/docs/pluggable_container/overview_plugin_mirror_source'},
+                            {text: '授权许可', link: '/docs/pluggable_container/overview_authority_license'}
                         ],
                     },
 

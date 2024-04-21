@@ -132,6 +132,12 @@ android {
 创建自定义`Application`类继承自`GlassBaseApplication`，并在`AndroidManifest.xml`中注册你自定义的`Application`
 类，将`App`的`theme`继承改为`Glass SDK`中的`Theme.Base.Glass`。在`addApplications`方法中通过`appConfig.add(PluginApplication())`初始化插件化容器。
 
+:::warning
+
+容器的运行需要鉴权，鉴权申请和`ProjectCode`OEM标识的申请请联系商务。鉴权详情请参见[容器鉴权须知](overview_authority_license)。
+
+:::
+
 :::: code-group
 ::: code-group-item App.kt
 
@@ -146,6 +152,8 @@ import com.teamhelper.base.application.AppConfig
 class App : GlassBaseApplication() {
     override fun addApplications(appConfig: AppConfig) {
         super.addApplications(appConfig)
+        // OEM鉴权标识
+        PluginEngine.setProjectCode("OemProject1")
         appConfig.add(PluginApplication())
     }
 }
