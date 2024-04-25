@@ -34,7 +34,7 @@ export default defineUserConfig({
                 appKey: 'c8NnfIQsmMHbexDPhTiDAwkv',
                 placeholder: '填写邮箱可以收到回复提醒哦！',
                 verify: true, // 验证码服务
-                // notify: true,
+                notify: true,
                 recordIP: true,
                 hideComments: false, // 隐藏评论
             }
