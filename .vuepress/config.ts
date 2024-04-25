@@ -208,7 +208,7 @@ export default defineUserConfig({
                         text: '插件化容器',
                         children: [
                             {text: '容器阐述', link: '/docs/pluggable_container/overview_pluggable_container'},
-                            {text: '快速搭建', link: '/docs/pluggable_container/create_container'},
+                            {text: '快速搭建', link: '/docs/pluggable_container/quick_start'},
                             {text: '用户空间', link: '/docs/pluggable_container/overview_user_space'},
                             {text: '插件管理', link: '/docs/pluggable_container/overview_plugin_management'},
                             {text: '通信机制', link: '/docs/pluggable_container/inter_application_communication'},
