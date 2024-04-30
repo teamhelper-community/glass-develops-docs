@@ -3,7 +3,7 @@ import recoTheme from "vuepress-theme-reco";
 
 export default defineUserConfig({
     title: "Glass Develops Tutorial",
-    description: "XR-Glass Application Develops Tutorial",
+    description: "AR-Glass Application Develops Tutorial",
     plugins: [],
     theme: recoTheme({
         autoSetBlogCategories: true,
@@ -256,7 +256,7 @@ export default defineUserConfig({
             body: [
                 {
                     type: "text",
-                    content: `🎉🎉🎉 TH 太昊开发者平台正式发布，并且希望开发者们在 QQ 社群和 GitHub 踊跃反馈使用体验和开发需求，我们会第一时间响应。推出统一开发框架是为了补全XR眼镜的通用能力的同时将魔数团在B端业务上的核心服务沉淀下来共享给全行业，换而言之，你们只管开发，我们来搞定各厂商硬件适配。`,
+                    content: `🎉🎉🎉 TH 太昊开发者平台正式发布，并且希望开发者们在 QQ 社群和 GitHub 踊跃反馈使用体验和开发需求，我们会第一时间响应。推出统一开发框架是为了补全AR眼镜的通用能力的同时将魔数团在B端业务上的核心服务沉淀下来共享给全行业，换而言之，你们只管开发，我们来搞定各厂商硬件适配。`,
                     style: "font-size: 12px;",
                 },
                 {
@@ -270,8 +270,8 @@ export default defineUserConfig({
                     type: "text",
                     content: `
           <ul>
-            <li>XR行业交流群：615444691</li>
-            <li>XR开发者交流群：815386788</li>
+            <li>AR行业交流群：615444691</li>
+            <li>AR开发者交流群：815386788</li>
           </ul>`,
                     style: "font-size: 12px;",
                 },
