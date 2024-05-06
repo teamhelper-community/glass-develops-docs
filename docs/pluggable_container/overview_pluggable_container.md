@@ -3,8 +3,8 @@ title: 容器阐述
 date: 2024-04-16 15:02:00
 ---
 
-<div align="center">
-<img  align="center" src="./introduce.assets/logo.png" alt="Exposed" width="315" /></div>
+<p align="center">
+<img  align="center" src="./introduce.assets/banner.svg" alt="Exposed" width="960" /></p>
 <br>
 <br>
 

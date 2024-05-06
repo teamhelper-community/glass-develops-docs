@@ -33,7 +33,8 @@ v.btnConfirm.setSlideEventViewStateListener(object : ISlideEventViewStateListene
 
 ## 手势操作回调
 
-`Glass Application SDK` 提供的封装`View`和`Activity`基类均已实现了`ISlideEventListener`接口，当开发者需要在`Activity`中监听AR设备操作或需要在`自定义View`中监听AR设备操作，可以通过重写`ISlideEventListener`中定义的方法，用以实现监听用户对AR眼镜的交互。
+`Glass Application SDK` 提供的封装`View`和`Activity`基类均已实现了`ISlideEventListener`接口，当开发者需要在`Activity`
+中监听AR设备操作或需要在`自定义View`中监听AR设备操作，可以通过重写`ISlideEventListener`中定义的方法，用以实现监听用户对AR眼镜的交互。
 
 <p align="center"><img src="./interaction_logic_listen.assets/image-20240411172209189.png" alt="image-20240411172209189" width="720"/></p>
 
