@@ -8,8 +8,6 @@ date: 2024-04-16 15:02:00
 <br>
 <br>
 
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/org.jetbrains.exposed/exposed-core/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.jetbrains.exposed/exposed-core)
-
 > `Glass Plugin Container` 是基于`Android Framework`虚拟化的沙盒系统，使应用程序模块化，更易扩展和维护，实现免安装
 
 :::info
