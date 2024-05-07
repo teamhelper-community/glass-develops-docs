@@ -12,8 +12,7 @@ date: 2024-03-19 09:00:00
 
 > `Glass Application SDK` 是一套基于 `Android`
 >
-原生的AR眼镜应用开发工具包，内部包含Glass常用UI组件和Glass应用基类，旨在帮助开发者以极简的接入步骤，快速构建适配多个厂商、数十款AR设备的  `AR Glass`
-> 应用。
+原生的AR眼镜应用开发工具包，内部包含Glass常用UI组件和Glass应用基类，旨在帮助开发者以极简的接入步骤，快速构建适配多个厂商、数十款AR设备的  `AR Glass` 应用。
 
 :::info
 
