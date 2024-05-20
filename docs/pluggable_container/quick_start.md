@@ -43,11 +43,19 @@ date: 2024-04-17 15:43:00
 1. 打开项目根目录下的 `settings.gradle` 文件，添加 Maven Central 依赖 (如果已有可忽略)：
 
    ```gradle
-   maven { url("http://maven.teamhelper.cn:8081/repository/MST/") }
+           google()
+           mavenCentral()
+           maven("http://maven.teamhelper.cn:8081/repository/MST/") {
+               isAllowInsecureProtocol = true
+           }
+           maven("https://jitpack.io")
+           maven("https://maven.rokid.com/repository/maven-public/")
+           maven("https://api.xposed.info/")
+           maven("https://s01.oss.sonatype.org/content/repositories/releases/")
    ```
-
+   
    ::: warning
-
+   
    如果你的 Android
    项目设置了 [dependencyResolutionManagement](https://docs.gradle.org/current/userguide/declaring_repositories.html#sub:centralized-repository-declaration)
    ，添加 Maven Central 依赖的方式可能存在差异。
@@ -62,7 +70,7 @@ date: 2024-04-17 15:43:00
 
     ```gradle
    dependencies {
-   		 implementation 'com.teamhelper.xr:glass-sdk:<LatestVersion>'
+   		implementation 'com.teamhelper.xr:glass-sdk:<LatestVersion>'
        implementation 'com.teamhelper.xr:glass-plugin-container:<LatestVersion>'
        ...
    }
@@ -73,7 +81,7 @@ date: 2024-04-17 15:43:00
 
     ```kotlin
    dependencies {
-     	 implementation("com.teamhelper.xr:glass-sdk:<LatestVersion>")
+     	implementation("com.teamhelper.xr:glass-sdk:<LatestVersion>")
        implementation("com.teamhelper.xr:glass-plugin-container:<LatestVersion>")
        ...
    }
@@ -172,6 +180,11 @@ class App : GlassBaseApplication() {
     <application
         ...
         android:name="<your_package>.App"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:requestLegacyExternalStorage="true"
+        tools:replace="android:appComponentFactory"
+        android:appComponentFactory=" "
+        tools:targetApi="31"
         android:theme="@style/Theme.TestContainer">
         ...
     </application>
