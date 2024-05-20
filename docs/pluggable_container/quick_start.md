@@ -42,7 +42,8 @@ date: 2024-04-17 15:43:00
 
 1. 打开项目根目录下的 `settings.gradle` 文件，添加 Maven Central 依赖 (如果已有可忽略)：
 
-   ```gradle
+   ```groovy
+       repositories {
            google()
            mavenCentral()
            maven("http://maven.teamhelper.cn:8081/repository/MST/") {
@@ -52,33 +53,33 @@ date: 2024-04-17 15:43:00
            maven("https://maven.rokid.com/repository/maven-public/")
            maven("https://api.xposed.info/")
            maven("https://s01.oss.sonatype.org/content/repositories/releases/")
+   
+       }
    ```
    
    ::: warning
    
    如果你的 Android
-   项目设置了 [dependencyResolutionManagement](https://docs.gradle.org/current/userguide/declaring_repositories.html#sub:centralized-repository-declaration)
-   ，添加 Maven Central 依赖的方式可能存在差异。
+   项目设置了 [dependencyResolutionManagement](https://docs.gradle.org/current/userguide/declaring_repositories.html#sub:centralized-repository-declaration)，添加 Maven Central 依赖的方式可能存在差异。
    :::
 
 
 2. 打开 `/app/build.gradle` 文件，在 `dependencies` 中同时添加`Glass Application SDK`和`Glass Plugin Container`
-   的依赖。你可以从[版本路线](/api/1.x/)中查询`Glass Application SDK`和`Glass Plugin Container`
-   的最新版本，并将 `<LatestVersion> `替换为具体的版本号。
+   的依赖。你可以从[版本路线](/api/1.x/)中查询`Glass Application SDK`和`Glass Plugin Container`的最新版本，并将 `<LatestVersion> `替换为具体的版本号。
    :::: code-group
    ::: code-group-item Gradle Groovy DSL
-
-    ```gradle
+   
+    ```groovy
    dependencies {
    		implementation 'com.teamhelper.xr:glass-sdk:<LatestVersion>'
        implementation 'com.teamhelper.xr:glass-plugin-container:<LatestVersion>'
        ...
    }
     ```
-
+   
    :::
    ::: code-group-item Gradle Kotlin DSL
-
+   
     ```kotlin
    dependencies {
      	implementation("com.teamhelper.xr:glass-sdk:<LatestVersion>")
@@ -86,14 +87,14 @@ date: 2024-04-17 15:43:00
        ...
    }
     ```
-
+   
    :::
    ::::
-
+   
    ::: info
-
+   
    如果创建项目时项目语言选为Java，需要额外为模块配置Kotlin支持。
-
+   
    :::
 
 ## 配置Java版本
@@ -103,7 +104,7 @@ date: 2024-04-17 15:43:00
 :::: code-group
 ::: code-group-item Gradle Groovy DSL
 
-```gradle
+```groovy
 android {
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_17
@@ -132,6 +133,28 @@ android {
 
 :::
 ::::
+
+## 开启DataBinding
+
+```groovy
+android {
+  	...
+    buildFeatures {
+        buildConfig = true
+        dataBinding = true
+    }
+  	...
+}
+```
+
+## 配置Gradle编译选项
+
+```properties
+org.gradle.jvmargs=-Xmx2048m -Dfile.encoding=UTF-8
+android.useAndroidX=true
+kotlin.code.style=official
+android.enableJetifier=true
+```
 
 ## 开始使用
 
@@ -180,7 +203,7 @@ class App : GlassBaseApplication() {
     <application
         ...
         android:name="<your_package>.App"
-        android:networkSecurityConfig="@xml/network_security_config"
+        android:usesCleartextTraffic="true"
         android:requestLegacyExternalStorage="true"
         tools:replace="android:appComponentFactory"
         android:appComponentFactory=" "
@@ -237,17 +260,17 @@ class MainActivity : GlassBaseActivity<ActivityMainBinding, EmptyViewModel>() {
     override fun initView() {
         v.btn1.setInstruct(InstructSingle.INSTALL_PLUGIN)
         v.btn1.setOnClickListener {
-            PluginEngine.installPlugin(File("/sdcard/test_plugin.apk"))
+            PluginEngine.installPlugin(File("/sdcard/test_plugin.apk"), -1)
         }
 
         v.btn2.setInstruct(InstructSingle.LOAD_PLUGIN)
         v.btn2.setOnClickListener {
-            PluginEngine.launchPlugin("com.mst.testplugin")
+            PluginEngine.launchPlugin("com.mst.testplugin", -1)
         }
 
         v.btn3.setInstruct(InstructSingle.UNINSTALL_PLUGIN)
         v.btn3.setOnClickListener {
-            PluginEngine.uninstallPlugin("com.mst.testplugin")
+            PluginEngine.uninstallPlugin("com.mst.testplugin", -1)
         }
 
         setFocusView(v.btn1)
@@ -305,6 +328,18 @@ class MainActivity : GlassBaseActivity<ActivityMainBinding, EmptyViewModel>() {
 
 :::
 ::::
+
+```kotlin
+package com.example.examplecontainer
+
+import com.mst.basics.instruct.base.InstructSingle
+
+object InstructSingle {
+  	val INSTALL_PLUGIN: InstructSingle = InstructSingle("an zhuang cha jian", "安装插件", "install plugin")
+    val LOAD_PLUGIN: InstructSingle = InstructSingle("jia zai cha jian", "加载插件", "load plugin")
+    val UNINSTALL_PLUGIN: InstructSingle = InstructSingle("xie zai cha jian", "卸载插件", "uninstall plugin")
+}
+```
 
 ## 运行容器
 

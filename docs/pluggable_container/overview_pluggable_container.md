@@ -27,7 +27,7 @@ date: 2024-04-16 15:02:00
 
 ## 与GlassApplicationSDK的关系
 
-![image-20240418181504552](./overview_pluggable_container.assets/image-20240418181504552.png)
+![image-20240418181504552](./overview_pluggable_container.assets/image-20240418181504552.svg)
 
 以上的架构图能很好地表达出`Glass Application SDK`与`Glass Plugin Container`之间的关系。
 
