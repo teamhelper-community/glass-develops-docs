@@ -43,6 +43,8 @@ date: 2024-04-17 15:43:00
 1. 打开项目根目录下的 `settings.gradle` 文件，添加 Maven Central 依赖 (如果已有可忽略)：
 
    ```groovy
+   dependencyResolutionManagement {
+       repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
        repositories {
            google()
            mavenCentral()
@@ -55,6 +57,7 @@ date: 2024-04-17 15:43:00
            maven("https://s01.oss.sonatype.org/content/repositories/releases/")
    
        }
+   }
    ```
    
    ::: warning
@@ -65,7 +68,7 @@ date: 2024-04-17 15:43:00
 
 
 2. 打开 `/app/build.gradle` 文件，在 `dependencies` 中同时添加`Glass Application SDK`和`Glass Plugin Container`
-   的依赖。你可以从[版本路线](/api/1.x/)中查询`Glass Application SDK`和`Glass Plugin Container`的最新版本，并将 `<LatestVersion> `替换为具体的版本号。
+   的依赖。你可以从[版本路线](/api/1.x/)中查询`Glass Application SDK`和`Glass Plugin Container`的最新版本，并将 `<LatestVersion> `替换为具体的版本号。目前最新版本为`com.teamhelper.xr:glass-sdk:1.3.53`、`com.teamhelper.xr:glass-plugin-container:1.3.93`
    :::: code-group
    ::: code-group-item Gradle Groovy DSL
    
@@ -147,7 +150,68 @@ android {
 }
 ```
 
+## 完整的build.gradle示例如下：
+
+```kotlin
+plugins {
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.jetbrains.kotlin.android)
+}
+
+android {
+    namespace = "com.example.examplecontainer"
+    compileSdk = 34
+
+    defaultConfig {
+        applicationId = "com.example.examplecontainer"
+        minSdk = 24
+        targetSdk = 34
+        versionCode = 1
+        versionName = "1.0"
+
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            isMinifyEnabled = false
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
+        }
+    }
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+    buildFeatures {
+        buildConfig = true
+        dataBinding = true
+    }
+}
+
+dependencies {
+
+    implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.appcompat)
+    implementation(libs.material)
+    implementation(libs.androidx.activity)
+    implementation(libs.androidx.constraintlayout)
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.androidx.junit)
+    androidTestImplementation(libs.androidx.espresso.core)
+    implementation("com.teamhelper.xr:glass-sdk:1.3.53")
+    implementation("com.teamhelper.xr:glass-plugin-container:1.3.93")
+}
+```
+
 ## 配置Gradle编译选项
+
+`gradle.properties`
 
 ```properties
 org.gradle.jvmargs=-Xmx2048m -Dfile.encoding=UTF-8
@@ -184,7 +248,7 @@ class App : GlassBaseApplication() {
     override fun addApplications(appConfig: AppConfig) {
         super.addApplications(appConfig)
         // OEM鉴权标识
-        PluginEngine.setProjectCode("OemProject1")
+        PluginEngine.setProjectCode("TEST")
         appConfig.add(PluginApplication())
     }
 }
