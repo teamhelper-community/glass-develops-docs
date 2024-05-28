@@ -9,6 +9,8 @@ date: 2024-04-17 15:43:00
 
 :::
 
+![基座开发全流程](./quick_start.assets/基座开发全流程.svg)
+
 ## 环境要求
 
 - [x] **系统要求：** `Windows 10 +`  `macOS 10.14 +`  `Linux 发行版 (Arch/Debian)`
