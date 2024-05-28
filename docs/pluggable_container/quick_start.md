@@ -421,6 +421,6 @@ object InstructSingle {
 你也可以通过Git拉取我们的示例项目快速上手`Glass Plugin Container`。
 
 ```bash
-git clone https://github.com/Teamhelper/glass-plugin-container-example.git
+git clone git@github.com:teamhelper-community/glass-plugin-container-example.git
 ```
 
