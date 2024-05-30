@@ -37,7 +37,21 @@ date: 2024-04-09 09:30:52
 1. 打开项目根目录下的 `settings.gradle` 文件，添加 Maven Central 依赖 (如果已有可忽略)：
 
    ```gradle
-   maven { url("http://maven.teamhelper.cn:8081/repository/MST/") }
+   dependencyResolutionManagement {
+       repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+       repositories {
+           google()
+           mavenCentral()
+           maven("http://maven.teamhelper.cn:8081/repository/MST/") {
+               isAllowInsecureProtocol = true
+           }
+           maven("https://jitpack.io")
+           maven("https://maven.rokid.com/repository/maven-public/")
+           maven("https://api.xposed.info/")
+           maven("https://s01.oss.sonatype.org/content/repositories/releases/")
+   
+       }
+   }
    ```
 
    ::: warning
@@ -47,18 +61,17 @@ date: 2024-04-09 09:30:52
    ，添加 Maven Central 依赖的方式可能存在差异。
    :::
 
-2. 打开 `/app/build.gradle` 文件，在 `dependencies` 中添加Glass SDK 的依赖。你可以从[版本路线](/api/1.x/)中查询 SDK
-   的最新版本，并将 `<LatestVersion> `替换为具体的版本号。
+2. 打开 `/app/build.gradle` 文件，在 `dependencies` 中添加Glass SDK的依赖。你可以从[版本路线](http://maven.teamhelper.cn:8081/#browse/browse:MST:com%2Fteamhelper%2Fxr%2Fglass-sdk)中查询SDK的最新版本，并将 `<LatestVersion> `替换为具体的版本号。
    :::: code-group
    ::: code-group-item Gradle Groovy DSL
-
+   
     ```gradle
     dependencies {
         implementation 'com.teamhelper.xr:glass-sdk:<LatestVersion>'
         ...
     }
     ```
-
+   
    :::
    ::: code-group-item Gradle Kotlin DSL
 
@@ -68,14 +81,14 @@ date: 2024-04-09 09:30:52
         ...
     }
     ```
-
+   
    :::
    ::::
 
    ::: info
-
+   
    如果创建项目时项目语言选为Java，需要额外为模块配置Kotlin支持。
-
+   
    :::
 
 ## 配置Java版本
@@ -114,6 +127,32 @@ android {
 
 :::
 ::::
+
+## 开启DataBinding
+
+```groovy
+android {
+  	...
+    buildFeatures {
+        buildConfig = true
+        dataBinding = true
+    }
+  	...
+}
+```
+
+## 配置Gradle编译选项
+
+`gradle.properties`
+
+```properties
+org.gradle.jvmargs=-Xmx2048m -Dfile.encoding=UTF-8
+android.useAndroidX=true
+kotlin.code.style=official
+android.enableJetifier=true
+```
+
+
 
 ## 开始使用
 
@@ -256,7 +295,6 @@ android {
 ```bash
 git clone https://github.com/Teamhelper/glass-applicatiin-tutorial.git
 ```
-
 
    <p align="center">
    <img  align="center" src="./quick_start.assets/image-20240410174418820.png" alt="image-20240410174418820" width="800" /></p>

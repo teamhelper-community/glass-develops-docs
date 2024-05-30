@@ -238,7 +238,10 @@ export default defineUserConfig({
                 text: '版本路线',
                 icon: 'SubVolume',
                 children: [
-                    {text: '1.0.0(RC)', link: '/docs/roadmap'},
+                    {
+                        text: 'Nexus',
+                        link: 'http://maven.teamhelper.cn:8081/#browse/browse:MST:com%2Fteamhelper%2Fxr'
+                    },
                 ],
             },
             {
