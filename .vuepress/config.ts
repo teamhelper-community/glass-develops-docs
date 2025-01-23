@@ -221,14 +221,47 @@ export default defineUserConfig({
                 ],
             },
             {
+                text: '开放平台',
+                icon: 'SubVolume',
+                children: [
+                    {
+                        text: '认证体系',
+                        children: [
+                            {text: '基本概念', link: '/serverDocs/certification_system/basic-concepts'},
+                            {text: '接入流程', link: '/serverDocs/certification_system/integration-process'},
+                        ],
+                    },
+                    {
+                        text: '应用登录和授权',
+                        children: [
+                            {text: '眼镜应用登录', link: '/serverDocs/application_authorization/glass-application'},
+                            {text: '网页应用登录', link: '/serverDocs/application_authorization/web-application'},
+                        ],
+                    },
+                    {
+                        text: 'API调用指南',
+                        children: [
+                            {text: '调用流程', link: '/serverDocs/api_call_guide/calling-process'},
+                            {text: 'API列表', link: '/serverDocs/api_call_guide/api-list'},
+                            {text: '通用参数', link: '/serverDocs/api_call_guide/common-parameters'},
+                        ],
+                    },
+                    {
+                        text: '事件订阅',
+                        children: [
+                            {text: '事件概述', link: '/serverDocs/event_subscription/event-overview'},
+                            {text: '事件列表', link: '/serverDocs/event_subscription/event-list'},
+                            {text: '通用事件体', link: '/serverDocs/event_subscription/common-event-body'},
+                        ],
+                    },
+                ],
+            },
+            {
                 text: '扩展能力',
                 icon: 'SubVolume',
                 children: [
                     {text: '远程协助', link: ''},
-                    {
-                        text: 'LLM知识库',
-                        link: ''
-                    },
+                    {text: 'LLM知识库', link: ''},
                     {text: '人脸识别', link: ''},
                     {text: 'OCR组件', link: ''},
                     {text: 'SOP组件', link: ''},
@@ -296,6 +329,6 @@ export default defineUserConfig({
                 }
             ],
         },
-    }),
+    })
     // debug: true,
 });
