@@ -163,13 +163,6 @@ export default defineUserConfig({
                     ],
                 },
                 {
-                    text: "通信机制",
-                    children: [
-                        "inter_application_communication",
-                        "container_plugin_communication"
-                    ],
-                },
-                {
                     text: "消息推送",
                     children: ["overview_push_message"],
                 },
@@ -184,7 +177,26 @@ export default defineUserConfig({
                         "authority_client_side",
                         "authority_server_side"
                     ],
-                }
+                },
+            ],
+            "/docs/bridge/": [
+                {
+                    text: "Bridge通信",
+                    children: [
+                        "bridge_quick_start",
+                        "bridge_api",
+                    ],
+                },
+            ],
+            "/docs/tpns/": [
+                {
+                    text: "TPNS推送消息",
+                    children: [
+                        "tpns_quick_start",
+                        "tpns_api",
+                        "tpns_server_api"
+                    ],
+                },
             ],
         },
         navbar: [
@@ -217,7 +229,21 @@ export default defineUserConfig({
                             {text: '授权许可', link: '/docs/pluggable_container/overview_authority_license'}
                         ],
                     },
-
+                    {
+                        text: 'Bridge通信',
+                        children: [
+                            {text: '快速开始', link: '/docs/bridge/bridge_quick_start'},
+                            {text: '客户端SDK', link: '/docs/bridge/bridge_api'},
+                        ],
+                    },
+                    {
+                        text: 'TPNS推送消息',
+                        children: [
+                            {text: '快速开始', link: '/docs/tpns/tpns_quick_start'},
+                            {text: '客户端SDK', link: '/docs/tpns/tpns_api'},
+                            {text: '服务端SDK', link: '/docs/tpns/tpns_server_api'},
+                        ],
+                    },
                 ],
             },
             {
