@@ -198,6 +198,35 @@ export default defineUserConfig({
                     ],
                 },
             ],
+            '/docs/develop_tools/': [
+                {
+                    text: '前言',
+                    children: [
+                        "develop_tools.md"
+                    ]
+                },
+                {
+                    text: '快速开始',
+                    children: [
+                        'quickstart'
+                    ],
+                },
+                {
+                    text: '功能列表',
+                    children: [
+                        'overview',
+                        'file',
+                        'application',
+                        'process',
+                        'performance',
+                        'shell',
+                        'screenshot',
+                        'logcat',
+                        'webview',
+                        'screencast'
+                    ],
+                }
+            ],
         },
         navbar: [
             {text: '快速开始', link: '/docs/quick_start/introduce', icon: 'Compass'},
@@ -310,6 +339,11 @@ export default defineUserConfig({
                     {text: '博客列表', link: '/posts'},
                     {text: '博客时间轴', link: '/timeline'},
                 ]
+            },
+            {
+                text: '开发者工具',
+                icon: 'Code',
+                link: '/docs/develop_tools/develop_tools'
             },
             {text: '案例', link: '/docs/examples', icon: 'Fire'},
             {text: '留言板', link: '/docs/message-board', icon: 'Chat'},
