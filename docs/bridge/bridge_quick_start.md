@@ -26,7 +26,7 @@ maven("http://maven.teamhelper.cn:8081/repository/MST/") {
 在依赖配置中加入以下实现依赖：
 
 ```groovy
-implementation("com.teamhelper.xr:glass-bridge:0.0.6")
+implementation("com.teamhelper.xr:glass-bridge:0.0.13")
 ```
 
 完成上述配置后，即可在项目中使用 Bridge SDK 提供的 IPC/RPC 通信能力。

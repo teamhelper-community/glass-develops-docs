@@ -37,7 +37,7 @@ maven {
 在您的依赖配置中加入以下实现依赖：
 
 ```groovy
-implementation "com.teamhelper.xr:glass-bridge-host:0.0.11"
+implementation "com.teamhelper.xr:glass-bridge-host:0.0.17"
 ```
 
 完成上述配置后，即可在项目中使用 TPNS 客户端 SDK 的相关接口。
@@ -51,8 +51,8 @@ implementation "com.teamhelper.xr:glass-bridge-host:0.0.11"
 ### 3.1 登录与登出
 
 - **登录**
-    - **方法**：`fun login(userId: Long, token: String, installedPkgsList: List<String>)`
-    - **说明**：在 Launcher 登录成功后调用，用于连接 TPNS 服务器。参数包括用户 ID、用户 Token 以及设备上已安装应用的包名列表。
+    - **方法**：`fun login(userId: Long, appKey: String, code: String, installedPkgsList: List<String>)`
+    - **说明**：在 Launcher 登录成功后调用，用于连接 TPNS 服务器。参数包括用户 ID、应用appKey、连接授权码 以及设备上已安装应用的包名列表。
 
 - **登出**
     - **方法**：`fun logout()`
