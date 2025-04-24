@@ -12,7 +12,7 @@ AR 眼镜上相机和麦克风的操作，能够大大提升开发效率，降�
 
 Glass Application SDK 基于 MVVM (Model-View-ViewModel) 架构模式，这种模式允许数据模型、用户界面和行为逻辑分离，提高了代码的可读性和可维护性。
 
-<p align="center"><img src="./overview_template_base_class.assets/1*F_EapUfBMsP08Qpytncjrg.png" alt="img" width="600"/></p>
+<p align="center"><img src="overview_template_base_class.assets/EapUfBMsP08Qpytncjrg.png" alt="img" width="600"/></p>
 
 - **Model**：负责管理应用程序的业务逻辑和数据。在 `Glass Application SDK` 中，你可以轻松地定义和操作数据模型。
 
