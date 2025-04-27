@@ -1,7 +1,9 @@
 import {defineUserConfig} from "vuepress";
 import recoTheme from "vuepress-theme-reco";
+import {viteBundler} from '@vuepress/bundler-vite'
 
 export default defineUserConfig({
+    bundler: viteBundler(),
     title: "Glass Develops Tutorial",
     description: "AR-Glass Application Develops Tutorial",
     plugins: [],
